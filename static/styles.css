@@ -1,0 +1,139 @@
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    line-height: 1.7;
+}
+
+/* Header styles */
+header {
+    background-color: #4CAF50; /* Greenish tone */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 5%;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+header #logo {
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+header nav a:hover::after {
+    transform: scaleX(1);
+}
+
+header nav a.active {
+    font-weight: bold;
+}
+
+/* Main content styles */
+main {
+    max-width: 1100px;
+    margin: 3em auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+p {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+
+ul li::before {
+    content: '•';
+    color: #4CAF50;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Footer styles */
+footer {
+    background-color: #2c3e50; 
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 3em;
+    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer a {
+    color: #ecf0f1;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #4CAF50;
+}
+
+.external-demo-link {
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.external-demo-link:hover {
+    background-color: #388e3c;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
